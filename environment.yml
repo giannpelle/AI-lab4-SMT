@@ -1,0 +1,12 @@
+name: aima_smt
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.6
+  - jupyterlab
+  - jupytext
+  - gym
+  - pip
+  - pip:
+    - wumpus[gym] @ git+https://gitlab.inf.unibz.it/tessaris/wumpus.git
+    - z3-solver
