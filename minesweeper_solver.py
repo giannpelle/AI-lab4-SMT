@@ -71,13 +71,15 @@ def get_updated_cartesian_matrix(*, from_mine_cartesian_matrix, with_sat_conclus
     sat_conclusions = with_sat_conclusions
     
     result_cartesian_matrix = []
-    for x in range(game_width):
+    for x in range(len(mine_cartesian_matrix)):
         column = []
-        for y in range(game_height):
-            if mine_cartesian_matrix[x][y] != "?":
-                column.append(mine_cartesian_matrix[x][y])
-            else:
+        
+        for y in range(len(mine_cartesian_matrix[0])):
+            if mine_cartesian_matrix[x][y] == "?":
                 column.append(sat_conclusions[x * game_height + y])
+            else:
+                column.append(mine_cartesian_matrix[x][y])
+        
         result_cartesian_matrix.append(column)
 
     return result_cartesian_matrix

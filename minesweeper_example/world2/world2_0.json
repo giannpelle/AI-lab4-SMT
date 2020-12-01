@@ -1,0 +1,6 @@
+{
+    "id":"0 - undecidable example", 
+    "numberOfMines": 10, 
+    "size": [9, 6],
+    "configuration": "??2??11??\n??4321122\n2??100000\n122100111\n1100001?1\n?10000111"
+}
